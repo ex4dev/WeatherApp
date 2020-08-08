@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+        <UseWPF>true</UseWPF>
+        <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove="assets\partially-cloudy.png"/>
+        <Resource Include="assets\partially-cloudy.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Resource>
+        <Resource Include="assets\icon.ico">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Resource>
+        <None Remove="assets\default-icon.png"/>
+        <Resource Include="assets\default-icon.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Resource>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Page Update="InputDialog.xaml">
+            <Generator></Generator>
+        </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="InputDialog.xaml.cs">
+            <DependentUpon>InputDialog.xaml</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+</Project>
