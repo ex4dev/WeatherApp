@@ -63,7 +63,7 @@
         </Grid>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal"
                     HorizontalAlignment="Center" VerticalAlignment="Center">
-            <!-- TODO put some additional info down here -->
+            <TextBlock Foreground="White" FontSize="15">*Displays 0 when not enough information</TextBlock>
         </StackPanel>
     </Grid>
 </Window>

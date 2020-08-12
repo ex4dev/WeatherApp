@@ -96,7 +96,7 @@ namespace WeatherApp
                     SetTempText(
                         Conversions.KelvinDToFahrenheit(WeatherHelper.GetWeatherValue(city, "main.temp")) + "°F");
 
-                    SetPrecipText("Rain: " + WeatherHelper.GetWeatherValue(city, "rain.1h") + "mm (last hour)");
+                    SetPrecipText("Rain: " + WeatherHelper.GetWeatherValue(city, "rain.1h") + "mm (last hour)*");
                     SetCloudText(WeatherHelper.GetWeatherValue(city, "weather[0].main"));
                     SetFeelsText("Feels Like " +
                         Conversions.KelvinDToFahrenheit(
